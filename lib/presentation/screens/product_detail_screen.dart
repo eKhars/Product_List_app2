@@ -17,14 +17,12 @@ class ProductDetailScreen extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              // ID del producto
               Text(
                 'ID: ${product.id}',
                 style: TextStyle(fontSize: 14, color: Colors.grey),
               ),
               SizedBox(height: 8),
               
-              // Categoría
               if (product.category != null)
                 Chip(
                   label: Text(
@@ -35,7 +33,6 @@ class ProductDetailScreen extends StatelessWidget {
                 ),
               SizedBox(height: 16),
               
-              // Imagen
               if (product.imageUrl != null)
                 Center(
                   child: Image.network(
@@ -59,21 +56,18 @@ class ProductDetailScreen extends StatelessWidget {
                 ),
               SizedBox(height: 24),
               
-              // Título/Nombre del producto
               Text(
                 product.title,
                 style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
               ),
               SizedBox(height: 16),
               
-              // Precio
               Text(
                 'Precio: \$${product.price.toStringAsFixed(2)}',
                 style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: Colors.green),
               ),
               SizedBox(height: 16),
               
-              // Rating
               if (product.rating != null)
                 Row(
                   children: [
@@ -104,7 +98,6 @@ class ProductDetailScreen extends StatelessWidget {
                 ),
               SizedBox(height: 24),
               
-              // Descripción
               Text(
                 'Descripción:',
                 style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
@@ -116,7 +109,6 @@ class ProductDetailScreen extends StatelessWidget {
               ),
               SizedBox(height: 32),
               
-              // Botón Agregar al carrito
               Center(
                 child: ElevatedButton.icon(
                   onPressed: () {

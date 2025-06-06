@@ -52,11 +52,11 @@ void main() {
         'id': 3,
         'title': 'Libro',
         'description': 'Un libro interesante',
-        'price': 25, // Entero en lugar de double
+        'price': 25, 
         'category': 'books',
         'image': 'https://example.com/book.jpg',
         'rating': {
-          'rate': 4, // Entero en lugar de double
+          'rate': 4,
           'count': 50
         }
       };

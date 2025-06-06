@@ -63,7 +63,6 @@ class _CartScreenState extends State<CartScreen> {
                       padding: const EdgeInsets.all(8.0),
                       child: Row(
                         children: [
-                          // Imagen del producto
                           if (product.imageUrl != null)
                             SizedBox(
                               width: 60,
@@ -84,7 +83,6 @@ class _CartScreenState extends State<CartScreen> {
                               child: Icon(Icons.image, color: Colors.grey),
                             ),
                           SizedBox(width: 12),
-                          // Información del producto
                           Expanded(
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
@@ -109,7 +107,6 @@ class _CartScreenState extends State<CartScreen> {
                               ],
                             ),
                           ),
-                          // Icono para eliminar del carrito
                           IconButton(
                             icon: Icon(Icons.delete_outline, color: Colors.red),
                             onPressed: () {
@@ -160,7 +157,6 @@ class _CartScreenState extends State<CartScreen> {
                 onPressed: items.isEmpty
                     ? null
                     : () {
-                        // Aquí iría la lógica de checkout
                         ScaffoldMessenger.of(context).showSnackBar(
                           SnackBar(content: Text('Procesando compra...')),
                         );

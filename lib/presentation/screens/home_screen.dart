@@ -130,7 +130,6 @@ class _HomeScreenState extends State<HomeScreen> {
                               child: Icon(Icons.image, color: Colors.grey),
                             ),
                           SizedBox(width: 12),
-                          // Información del producto
                           Expanded(
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
@@ -170,7 +169,6 @@ class _HomeScreenState extends State<HomeScreen> {
                               ],
                             ),
                           ),
-                          // Flecha para navegar al detalle
                           IconButton(
                             icon: Icon(Icons.arrow_forward_ios),
                             onPressed: () {

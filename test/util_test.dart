@@ -5,7 +5,6 @@ import 'package:product2/data/models/product.dart';
 void main() {
   group('Cart', () {
     setUp(() {
-      // Limpiar el carrito antes de cada test
       Cart.items.clear();
     });
 

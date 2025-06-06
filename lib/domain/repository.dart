@@ -8,14 +8,11 @@ import '../data/models/product.dart';
 
 
 class Repository {
-  // Firebase Auth
   final FirebaseAuth _auth = FirebaseAuth.instance;
   final GoogleSignIn _googleSignIn = GoogleSignIn();
   
-  // Fake Store API
   static const String baseUrl = 'https://fakestoreapi.com';
 
-  // Autenticación con Google (Firebase)
   Future<User?> signInWithGoogle() async {
     final googleUser = await _googleSignIn.signIn();
     if (googleUser == null) return null;
@@ -31,13 +28,11 @@ class Repository {
     return userCredential.user;
   }
 
-  // Cerrar sesión
   Future<void> signOut() async {
     await _googleSignIn.signOut();
     await _auth.signOut();
   }
 
-  // Login con usuario y contraseña (API)
   Future<UserModel?> loginWithCredentials(String email, String password) async {
     try {
       final response = await http.post(
@@ -62,7 +57,6 @@ class Repository {
     }
   }
 
- // Obtener todos los productos
   Future<List<Product>> getProducts() async {
     try {
       final response = await http.get(Uri.parse('$baseUrl/products'));
@@ -78,7 +72,6 @@ class Repository {
     }
   }
 
-  // Obtener un producto por ID
   Future<Product> getProduct(int id) async {
     try {
       final response = await http.get(Uri.parse('$baseUrl/products/$id'));
